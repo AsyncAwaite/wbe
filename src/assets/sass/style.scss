@@ -1,7 +1,8 @@
 @import "libs/bootstrap-reboot.min";
-
+@import "libs/bootstrap-grid.min";
 @import "base/variables";
 @import "base/func";
+@import "base/mixins";
 
 * {
   font-family: "Roboto", sans-serif;
@@ -18,8 +19,8 @@ html {
 body {
   height: 100%;
   margin: 0;
-  font-size: 1.4rem;
-  line-height: 1.6rem;
+  font-size: 1.8rem;
+  line-height: 2.1rem;
   font-weight: normal;
   color: $fc;
   &.active {
@@ -35,12 +36,54 @@ h5,
 h6 {
   margin: 0;
 }
+
+.logo {
+  display: inline-block;
+  max-width: 100%;
+  img {
+    max-width: 11.7rem;
+    height: 4.1rem;
+    object-fit: cover;
+    display: block;
+  }
+}
+
 .page {
   display: grid;
   overflow: hidden;
   min-height: 100vh;
   grid-template-rows: auto 1fr auto;
 }
+.header {
+  padding: 10px 0;
+  position: fixed;
+  top: 2.4rem;
+  z-index: 100;
+}
 
+.t-white {
+  color: #ffffff;
+}
+.t-center {
+  text-align: center;
+}
+.f-bold {
+  font-weight: bold;
+}
+.t-upper {
+  text-transform: uppercase;
+}
+.t-gradient {
+  background: linear-gradient(92.03deg, #E01B4C 15.01%, #590093 75.44%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+ 
 
+}
+
+@import "blocks/btn";
+@import "blocks/sections";
+@import "blocks/hero";
+@import "blocks/about";
 @import "blocks/media";

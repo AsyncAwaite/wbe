@@ -34,13 +34,11 @@ gulp.task("styles", function () {
 
 
 gulp.task("watch", function () {
-  gulp.watch("src/sass/**/*.+(scss|sass|css)", gulp.parallel("styles"));
   gulp.watch("src/*.html").on("change", gulp.parallel("html"));
   gulp.watch("src/js/**/*.js").on("change", gulp.parallel("build-js"));
-  // gulp.watch("src/assets/fonts/**/*").on("all", gulp.parallel("fonts"));
-  // gulp.watch("src/assets/icons/**/*").on("all", gulp.parallel("icons"));
-  gulp.watch("src/assets/img/**/*").on("all", gulp.parallel("images"));
   gulp.watch("src/assets/**/*.*", gulp.parallel("copy-assets"));
+  gulp.watch("src/assets/sass/**/*.+(scss|sass|css)", gulp.parallel("styles"));
+  gulp.watch("src/assets/img/**/*").on("all", gulp.parallel("images"));
 });
 
 gulp.task("html", function () {
