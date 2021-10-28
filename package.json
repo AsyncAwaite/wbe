@@ -1,0 +1,43 @@
+{
+  "name": "start",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.3",
+    "browser-sync": "^2.27.7",
+    "core-js": "^3.19.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-cli": "^2.3.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^6.2.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.1.1",
+    "webpack": "^4.41.2",
+    "webpack-stream": "^5.2.1"
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "maintained node versions",
+    "not dead"
+  ],
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "aos": "^3.0.0-beta.6",
+    "axios": "^0.21.4",
+    "imask": "^6.2.2",
+    "swiper": "^6.8.4"
+  }
+}
