@@ -8,16 +8,12 @@
     padding-bottom: 8.5rem;
   }
   &__item {
-    border: 2px solid;
-    border-image: linear-gradient(
-      139.13deg,
-      #ac1168 13.77%,
-      #590093 49.33%,
-      #00ffff 83.44%
-    );
-    border-image-slice: 1;
     padding: 1.9rem 1.5rem;
     height: 17rem;
+    background-image: radial-gradient(circle at 100% 100%, transparent 6px, #590093 6px, #590093 8px, transparent 8px), linear-gradient(to right, #590093, #00ffff), radial-gradient(circle at 0% 100%, transparent 6px, #00ffff 6px, #00ffff 8px, transparent 8px), linear-gradient(to bottom, #00ffff, #00ffff), radial-gradient(circle at 0% 0%, transparent 6px, #00ffff 6px, #00ffff 8px, transparent 8px), linear-gradient(to left, #00ffff, #590093), radial-gradient(circle at 100% 0%, transparent 6px, #590093 6px, #590093 8px, transparent 8px), linear-gradient(to top, #590093, #590093);
+background-size: 8px 8px, calc(100% - 16px) 2px, 8px 8px, 2px calc(100% - 16px);
+background-position: top left,top center,top right,center right, bottom right,bottom center,bottom left,center left;  
+background-repeat: no-repeat;
 
     h3 {
       font-size: 32px;
@@ -31,7 +27,6 @@
   }
   &__author {
     padding: 8.5rem 0;
-  
   }
   .author {
     position: relative;
@@ -73,7 +68,6 @@
       @include line;
       top: 0;
     }
-    
   }
   .partners {
     flex-wrap: wrap;

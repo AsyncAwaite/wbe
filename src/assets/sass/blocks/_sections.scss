@@ -71,11 +71,25 @@
   }
   &__certificate {
     padding: 9rem 0;
-    background: linear-gradient(111.04deg, #590093 10.15%, #E01B4C 111.51%);
-  
+    background: linear-gradient(111.04deg, #590093 10.15%, #e01b4c 111.51%);
   }
   &__members {
-   padding: 6rem 0 9rem; 
+    padding: 6rem 0 9rem;
+    h3 {
+      font-size: 42px;
+      line-height: 49px;
+      margin-bottom: 3rem;
+    }
+    h2 {
+      width: 85%;
+      margin: 0 auto 3rem;
+      font-size: 32px;
+      line-height: 37px;
+    }
   }
+  &__booking {
+    padding: 9rem 0;
 
+    background: linear-gradient(90deg, #590093 0%, #e01b4c 100%);
+  }
 }

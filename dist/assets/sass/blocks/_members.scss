@@ -1,14 +1,38 @@
 .members {
+  margin-bottom: 5rem;
 
-  h3 {
+  &__title {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 30px;
+    color: #969696;
+    margin-bottom: 0.8rem;
+  }
+  &__quantity {
     font-size: 42px;
-line-height: 49px;
-margin-bottom: 3rem;
+    line-height: 48px;
+    margin-bottom: 1.6rem;
+    span {
+      color: #e01b4c;
+    }
   }
-  h2 {
-    width: 85%;
-    margin: 0 auto 3rem;
-    font-size: 32px;
-    line-height: 37px;
+  &__range {
+    background: #e0dddd;
+    border-radius: 12px;
+    height: 24px;
+    position: relative;
+    width: 80%;
+
+    &::after {
+      border-radius: 12px;
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 70%;
+      left: 0;
+      content: "";
+      background: linear-gradient(90.07deg, #e01b4c 2.78%, #590093 56.18%);
+    }
   }
+
 }
