@@ -1,0 +1,27 @@
+.result {
+  h2 {
+    margin-bottom: 3.2rem;
+  }
+  .list {
+    width: 50%;
+    margin: 0 auto 4.7rem;
+    &__icon {
+      width: 40px;
+      height: 30px;
+      svg {
+        path {
+          fill: #fff;
+        }
+      }
+    }
+    &__item {
+      margin-bottom: 3.3rem;
+    }
+  }
+  .t-gradient {
+    background: linear-gradient(180deg, #590093 0%, #e01b4c 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

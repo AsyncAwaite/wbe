@@ -58,32 +58,58 @@ h6 {
   padding: 10px 0;
   position: fixed;
   top: 2.4rem;
+  left: 0;
+  right: 0;
   z-index: 100;
 }
-
-.t-white {
-  color: #ffffff;
+::-webkit-scrollbar {
+  width: 0px;
 }
-.t-center {
-  text-align: center;
+::-webkit-scrollbar-track-piece {
+  background-color: transparent;
+  border-radius: 6px;
 }
-.f-bold {
-  font-weight: bold;
-}
-.t-upper {
-  text-transform: uppercase;
-}
-.t-gradient {
-  background: linear-gradient(92.03deg, #E01B4C 15.01%, #590093 75.44%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+.list {
+  margin-bottom: 0;
+  list-style: none;
  
-
+  &__item {
+    margin-bottom: 2.8rem;
+  }
+  &__icon {
+    width: 32px;
+    height: 25px;
+    margin-right: 1.4rem;
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__text {
+    width: 100%;
+  }
 }
+.certificate {
+  &__title {
+    margin-bottom: 4.5rem;
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 80%;
+    background: center center / cover url(../img/certificate.png);
+    background-repeat: no-repeat;
+  }
+}
+
+@import "blocks/helpers";
 
 @import "blocks/btn";
 @import "blocks/sections";
 @import "blocks/hero";
 @import "blocks/about";
+@import "blocks/you-know";
+@import "blocks/result";
+@import "blocks/for-who";
+@import "blocks/members";
 @import "blocks/media";

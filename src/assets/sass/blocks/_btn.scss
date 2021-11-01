@@ -1,6 +1,6 @@
 .btn {
   padding: 16px 0;
-  display: inline-block;
+  display: block;
   border: none;
   text-align: center;
   font-size: 24px;
@@ -9,7 +9,6 @@
   border-radius: 9px;
   background: $bg-a;
   min-width: 35rem;
-  cursor: pointer;
   &_white {
     background: #ffffff;
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);

@@ -1,0 +1,94 @@
+.for-who {
+  h2 {
+    font-size: size(56, 20);
+    line-height: size(64, 28);
+    margin-bottom: 4rem;
+  }
+  &__items {
+    padding-bottom: 8.5rem;
+  }
+  &__item {
+    border: 2px solid;
+    border-image: linear-gradient(
+      139.13deg,
+      #ac1168 13.77%,
+      #590093 49.33%,
+      #00ffff 83.44%
+    );
+    border-image-slice: 1;
+    padding: 1.9rem 1.5rem;
+    height: 17rem;
+
+    h3 {
+      font-size: 32px;
+      line-height: 37px;
+      margin-bottom: 1.9rem;
+    }
+    div {
+      font-size: 2rem;
+      line-height: 2.3rem;
+    }
+  }
+  &__author {
+    padding: 8.5rem 0;
+  
+  }
+  .author {
+    position: relative;
+    &::before {
+      @include before-circle;
+      top: 20%;
+      right: 0;
+    }
+    &__photo {
+      height: 100%;
+      background: center center / contain url(../img/shazad_photo.png);
+      background-repeat: no-repeat;
+    }
+    &__subtitle {
+      font-size: 24px;
+      line-height: 28px;
+      margin-bottom: 0.8rem;
+      background: linear-gradient(90deg, #d01855 0%, #5b0192 65.68%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    &__title {
+      font-size: size(64, 24);
+      line-height: size(74, 34);
+      margin-bottom: 4rem;
+    }
+    .list {
+      margin-bottom: 3.4rem;
+      &__item {
+        margin-bottom: 1.1rem;
+      }
+    }
+  }
+  &__partners {
+    padding-top: 6.6rem;
+    position: relative;
+    &::after {
+      @include line;
+      top: 0;
+    }
+    
+  }
+  .partners {
+    flex-wrap: wrap;
+    img {
+      max-height: 74px;
+      height: 100%;
+      max-width: 15rem;
+      width: 100%;
+      margin: 2rem;
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
