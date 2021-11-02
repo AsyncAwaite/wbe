@@ -1,46 +1,13 @@
 .booking {
   &__title {
     font-size: 36px;
-line-height: 41px;
-margin-bottom: 16rem;
+    line-height: 41px;
+    margin-bottom: 16rem;
   }
-
-}
-
-.timer {
-  margin-bottom: 20px;
-  font-size: 42px;
-  line-height: 51px;
-  font-weight: bold;
-  margin-left: auto;
-  margin-right: auto;
-}
-.timer .timer__item {
-  text-align: center;
-  margin: 0 30px;
-  position: relative;
-}
-.timer .timer__numb {
-  position: relative;
-}
-.timer .timer__numb::after {
-  position: absolute;
-  content: ":";
-  right: -34px;
-  bottom: 0;
-}
-.timer .timer__item:last-child .timer__numb::after {
-  content: none;
-}
-.timer .timer__item .timer__text {
-  width: 75px;
-  text-align: center;
-  font-size: 18px;
-  line-height: 22px;
-}
- .timer__limited {
-  font-size: 20px;
-  line-height: 24px;
-  color: #ff9696;
-  text-align: center;
+  h3 {
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 32px;
+    margin-bottom: 2.7rem;
+  }
 }

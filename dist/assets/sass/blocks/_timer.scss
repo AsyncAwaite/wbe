@@ -1,0 +1,19 @@
+.timer {
+  &__item {
+  margin-right: 3rem;
+  }
+  &__numb {
+    width: 92px;
+    height: 92px;
+    font-weight: bold;
+    font-size: 72px;
+    line-height: 83px;
+    margin-bottom: 1.5rem;
+    background: #ffffff;
+    border-radius: 10px;
+  }
+  &__text {
+    font-size: 22px;
+    line-height: 27px;
+  }
+}

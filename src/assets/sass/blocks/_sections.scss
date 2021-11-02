@@ -5,6 +5,8 @@
     padding: 8rem 0 6rem;
     background: center center / cover url(../img/hero_bg.jpg);
     background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
 
     &::after {
       content: "";
@@ -91,5 +93,22 @@
     padding: 9rem 0;
 
     background: linear-gradient(90deg, #590093 0%, #e01b4c 100%);
+  }
+  &__benefits{
+    padding: 90px 0;
+    .container {
+      position: relative;
+      &::before {
+        @include before-circle;
+        top: -14rem;
+      }
+      &::after {
+        @include before-circle;
+        bottom: 0;
+        right: -23%;
+        transform: scale(1.78);
+
+      }
+    }
   }
 }

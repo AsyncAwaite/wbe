@@ -7,12 +7,47 @@
   font-weight: bold;
   line-height: 28px;
   border-radius: 9px;
-  background: $bg-a;
+  transition: all 0.5s linear;
   min-width: 35rem;
   position: relative;
+  &:focus,
+  &:focus-visible {
+    outline: none;
+    border: none;
+  }
+
+  &__fill {
+    background: $bg-a;
+    z-index: 5;
+    overflow: hidden;
+    &_helper {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: $btnHover;
+      opacity: 0;
+      // transition: opacity 0.5s ease;
+      animation: fill 3s infinite ease-in-out;
+    }
+    &:hover .btn__fill_helper {
+      opacity: 1;
+    }
+    &:hover {
+      background: $btnHover;
+    }
+  }
   &_white {
     background: #ffffff;
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+    
+  }
+  &_scale {
+    &:hover {
+      transform: scale(1.03);
+    }
   }
   &_stroke {
     border: 1px solid;
@@ -24,16 +59,19 @@
   }
   &_stroke-radius {
     background-clip: padding-box;
-      border: solid 1px transparent; 
-      &:before {
-        content: '';
-        position: absolute;
-        top: 0; right: 0; bottom: 0; left: 0;
-        z-index: -1;
-        margin: -1px; 
-        border-radius: inherit; 
-        background: linear-gradient(180deg, #E01B4C 0%, #590093 100%);
-      }
+    border: solid 1px transparent;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      margin: -1px;
+      border-radius: inherit;
+      background: linear-gradient(180deg, #e01b4c 0%, #590093 100%);
+    }
   }
   &_xs {
     padding: 6px 0;
@@ -42,12 +80,28 @@
     height: 3.6rem;
     min-width: 20rem;
   }
-  @media (max-width: 576px) { 
-    min-width: 30rem;
+  @media (max-width: 576px) {
+    min-width: 25rem;
+    padding: 1rem 0;
+    font-size: 2rem;
     &_xs {
       min-width: 15rem;
       font-size: 16px;
       padding: 5px 8px;
     }
+  }
+  @media (max-width: 320px) {
+    min-width: 22rem;
+  }
+}
+@keyframes fill {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }

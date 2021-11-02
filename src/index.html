@@ -40,11 +40,12 @@
 <body>
 
     <div class="page">
-        <header class="header container">
+        <header class="header">
             <div class="container">
                 <div class="d-flex justify-content-between align-items-center">
                     <a href="#" class="logo"><img src="assets/img/logo.png" alt=""></a>
-                    <button class="btn btn_xs t-white">Заповнити анкету</button>
+                    <button class="btn btn__fill btn_xs t-white" data-modal> <span class="btn__fill_helper"></span>Заповнити
+                        анкету</button>
                 </div>
             </div>
 
@@ -75,7 +76,7 @@
                         <div class="hero__date f-bold t-center">
                             11 листопада, 19:00 за Києвом
                         </div>
-                        <button class="btn t-white">Взяти участь</button>
+                        <button class="btn t-white btn__fill"  data-modal>Взяти участь</button>
                     </div>
                 </div>
 
@@ -353,7 +354,7 @@
 
 
 
-                    <button class="btn btn_white m-a">
+                    <button class="btn btn_white btn_scale m-a"  data-modal>
                         <span class="t-gradient">
                             Заповнити заявку
                         </span>
@@ -402,7 +403,7 @@
                                         Digital-маркетолог
                                     </h3>
                                     <div>
-                                        ВВи додасте у свій арсенал інструменти, які зараз використовують великі
+                                        Ви додасте у свій арсенал інструменти, які зараз використовують великі
                                         корпорації.
                                     </div>
                                 </div>
@@ -511,7 +512,8 @@
                                         </div>
                                     </li>
                                 </ul>
-                                <button class="btn t-white">Заповнити заявку</button>
+                                <button class="btn btn__fill t-white"  data-modal> <span class="btn__fill_helper"></span>Заповнити
+                                    заявку</button>
                             </div>
                         </div>
                     </div>
@@ -566,7 +568,7 @@
                         </div>
 
                     </div>
-                    <button class="btn btn_stroke-radius btn_white m-a">
+                    <button class="btn btn_stroke-radius btn_white m-a"  data-modal>
                         <span class="t-gradient">
                             Заповнити заявку
                         </span>
@@ -575,64 +577,326 @@
 
 
             </section>
-            <section class="section__booking booking">
+            <section class="section__booking booking t-white ">
                 <div class="container">
                     <div class="row">
-                        <div class="col-12 col-md-6">
-                            <h2 class="booking__title f-bold t-white t-upper">
+                        <div class="col-12 col-lg-6">
+                            <h2 class="booking__title f-bold t-upper">
                                 ЗАБРОНЮЙТЕ МІСЦЕ ТА ОТРИМАЙТЕ БЕЗКОШТОВНУ КОНСУЛЬТАЦІЮ ПО ЛЕКЦІЇ:
                             </h2>
-                            <!-- <div class="timer d-flex  ">
-                                <div class="timer__item d-flex flex-column">
-                                  <span class="timer__numb" data-timer="days">
-                                    5
-                                  </span>
-              
-              
-                                  <span class="timer__text">
-                                    днів
-                                  </span>
+                            <h3> Спеціальна вартість актуальна ще:</h3>
+                            <div class="timer d-flex  t-center f-bold  ">
+                                <div class="timer__item d-flex flex-column justify-content-center">
+                                    <div class="timer__numb d-flex align-items-center justify-content-center"
+                                        data-timer="days">
+                                        <span class=" t-gradient">5</span>
+                                    </div>
+
+
+                                    <div class="timer__text">
+                                        днів
+                                    </div>
                                 </div>
-                                <div class="timer__item d-flex flex-column">
-                                  <span class="timer__numb" data-timer="hours">
-                                    16
-                                  </span>
-                                  <span class="timer__text">
-                                    годин
-                                  </span>
+                                <div class="timer__item d-flex flex-column justify-content-center">
+                                    <div class="timer__numb  d-flex align-items-center  justify-content-center"
+                                        data-timer="hours">
+                                        <span class=" t-gradient">16</span>
+                                    </div>
+                                    <div class="timer__text">
+                                        годин
+                                    </div>
                                 </div>
-                                <div class="timer__item d-flex flex-column">
-                                  <span class="timer__numb" data-timer="minutes">
-                                    25
-                                  </span>
-              
-              
-                                  <span class="timer__text">
-                                    хвилин
-                                  </span>
+                                <div class="timer__item d-flex flex-column justify-content-center">
+                                    <div class="timer__numb  d-flex align-items-center justify-content-center"
+                                        data-timer="minutes">
+                                        <span class=" t-gradient">25</span>
+                                    </div>
+
+
+                                    <div class="timer__text">
+                                        хвилин
+                                    </div>
                                 </div>
-                                <div class="timer__item d-flex flex-column">
-                                  <span class="timer__numb" data-timer="seconds">
-                                    46
-                                  </span>
-              
-                                  <span class="timer__text">
-                                    секунд
-                                  </span>
+                                <div class="timer__item d-flex flex-column justify-content-center">
+                                    <div class="timer__numb  d-flex align-items-center justify-content-center"
+                                        data-timer="seconds">
+                                        <span class=" t-gradient">55</span>
+                                    </div>
+
+                                    <div class="timer__text">
+                                        секунд
+                                    </div>
                                 </div>
-                              </div> -->
+                            </div>
                         </div>
-                        <div class="col-12 col-md-6"></div>
+                        <div class="col-12 col-lg-6">
+                            <div class="form bg-white m-a">
+                                <form action="#">
+                                    <div class="form__title t-gradient f-bold">
+                                        Заявка на участь у зустрічі
+                                    </div>
+                                    <div class="form__block">
+                                        <input type="text" class="form__input" name="name" placeholder="Ім’я">
+
+                                        <div class="form__erorr"></div>
+                                    </div>
+                                    <div class="form__block">
+                                        <input type="email" class="form__input" name="email" placeholder="E-mail">
+
+                                        <div class="form__erorr"></div>
+                                    </div>
+                                    <div class="form__block">
+                                        <input type="number" class="form__input" name="phone"
+                                            placeholder="+38 (___) ___-__-__">
+
+                                        <div class="form__erorr"></div>
+                                    </div>
+                                    <div class="form__block">
+                                        <div class="title f-bold">
+                                            Оберіть зручний спосіб зв’язку
+                                        </div>
+                                        <label class="form__checkbox">
+                                            <input type="checkbox" name="connect" value="tel">
+                                            <span class="check">
+                                                <svg width="32" height="25" viewBox="0 0 32 25" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M14.4851 23.8598C13.0343 25.3801 10.6802 25.3801 9.23008 23.8598L1.08812 15.3278C-0.362705 13.8083 -0.362705 11.3414 1.08812 9.82185C2.53824 8.30154 4.89232 8.30154 6.34314 9.82185L11.1942 14.9045C11.5604 15.2875 12.1548 15.2875 12.5217 14.9045L25.6569 1.14023C27.107 -0.380077 29.4611 -0.380077 30.9119 1.14023C31.6086 1.8703 32 2.86085 32 3.89323C32 4.9256 31.6086 5.91615 30.9119 6.64622L14.4851 23.8598Z"
+                                                        fill="url(#paint0_linear_0:86)" />
+                                                    <defs>
+                                                        <linearGradient id="paint0_linear_0:86" x1="16" y1="0" x2="16"
+                                                            y2="25" gradientUnits="userSpaceOnUse">
+                                                            <stop stop-color="#590093" />
+                                                            <stop offset="1" stop-color="#CD1857" />
+                                                        </linearGradient>
+                                                    </defs>
+                                                </svg>
+                                            </span>
+                                            <span>Телефон</span>
+                                        </label>
+                                        <br>
+                                        <label class="form__checkbox">
+                                            <input type="checkbox" name="connect" value="messenger">
+                                            <span class="check">
+                                                <svg width="32" height="25" viewBox="0 0 32 25" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M14.4851 23.8598C13.0343 25.3801 10.6802 25.3801 9.23008 23.8598L1.08812 15.3278C-0.362705 13.8083 -0.362705 11.3414 1.08812 9.82185C2.53824 8.30154 4.89232 8.30154 6.34314 9.82185L11.1942 14.9045C11.5604 15.2875 12.1548 15.2875 12.5217 14.9045L25.6569 1.14023C27.107 -0.380077 29.4611 -0.380077 30.9119 1.14023C31.6086 1.8703 32 2.86085 32 3.89323C32 4.9256 31.6086 5.91615 30.9119 6.64622L14.4851 23.8598Z"
+                                                        fill="url(#paint0_linear_0:86)" />
+                                                    <defs>
+                                                        <linearGradient id="paint0_linear_0:86" x1="16" y1="0" x2="16"
+                                                            y2="25" gradientUnits="userSpaceOnUse">
+                                                            <stop stop-color="#590093" />
+                                                            <stop offset="1" stop-color="#CD1857" />
+                                                        </linearGradient>
+                                                    </defs>
+                                                </svg>
+                                            </span>
+                                            <span>Месенджер</span>
+                                        </label>
+                                        <br>
+                                        <label class="form__checkbox">
+                                            <input type="checkbox" name="connect" value="mail">
+                                            <span class="check">
+                                                <svg width="32" height="25" viewBox="0 0 32 25" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M14.4851 23.8598C13.0343 25.3801 10.6802 25.3801 9.23008 23.8598L1.08812 15.3278C-0.362705 13.8083 -0.362705 11.3414 1.08812 9.82185C2.53824 8.30154 4.89232 8.30154 6.34314 9.82185L11.1942 14.9045C11.5604 15.2875 12.1548 15.2875 12.5217 14.9045L25.6569 1.14023C27.107 -0.380077 29.4611 -0.380077 30.9119 1.14023C31.6086 1.8703 32 2.86085 32 3.89323C32 4.9256 31.6086 5.91615 30.9119 6.64622L14.4851 23.8598Z"
+                                                        fill="url(#paint0_linear_0:86)" />
+                                                    <defs>
+                                                        <linearGradient id="paint0_linear_0:86" x1="16" y1="0" x2="16"
+                                                            y2="25" gradientUnits="userSpaceOnUse">
+                                                            <stop stop-color="#590093" />
+                                                            <stop offset="1" stop-color="#CD1857" />
+                                                        </linearGradient>
+                                                    </defs>
+                                                </svg>
+                                            </span>
+                                            <span>Email</span>
+                                        </label>
+
+                                    </div>
+                                    <button class="btn btn__fill  t-white"> <span
+                                            class="btn__fill_helper"></span>Надіслати заявку</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <section class="section__benefits t-white f-bold benefits">
+                <div class="container">
+                    <h2 class="t-center">
+                        ЯК ПРОХОДИТЬ НАВЧАННЯ
+                    </h2>
+                    <div class="row flex-column align-items-center">
+
+                        <div class="col-12 col-md-7">
+                            <div class="benefits__item d-flex">
+                                <div
+                                    class="benefits__item-index d-flex align-items-center  justify-content-center t-purple">
+                                    1
+                                </div>
+                                <div class="benefits__item-text bg-purple d-flex align-items-center">
+                                    Доступ до лекції просто з вашого смартфона, планшета або комп'ютера
+
+                                </div>
+                            </div>
+                            <div class="benefits__item d-flex">
+                                <div
+                                    class="benefits__item-index d-flex align-items-center  justify-content-center t-pink">
+                                    2
+                                </div>
+                                <div class="benefits__item-text bg-pink d-flex align-items-center">
+                                    Нетворкінг та доступ до закритого ком'юніті
+
+                                </div>
+                            </div>
+                            <div class="benefits__item d-flex">
+                                <div
+                                    class="benefits__item-index d-flex align-items-center  justify-content-center t-purple">
+                                    3
+                                </div>
+                                <div class="benefits__item-text bg-purple d-flex align-items-center">
+                                    10% теорії + 90% практики
+
+                                </div>
+                            </div>
+                            <div class="benefits__item d-flex">
+                                <div
+                                    class="benefits__item-index d-flex align-items-center  justify-content-center t-pink">
+                                    4
+                                </div>
+                                <div class="benefits__item-text bg-pink d-flex align-items-center">
+                                    Запис та презентація по завершенню лекції
+
+                                </div>
+                            </div>
+                            <div class="benefits__item d-flex">
+                                <div
+                                    class="benefits__item-index d-flex align-items-center  justify-content-center t-purple">
+                                    5
+                                </div>
+                                <div class="benefits__item-text bg-purple d-flex align-items-center">
+                                    Особиста робота з професором CAMBRIDGE JUDGE BUSINESS SCHOOL
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
             </section>
 
         </main>
-        <footer class="footer">
+        <footer class="footer bg-purple t-white f-bold">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center
+                ">
+                    <a href="#" class="footer__logo">
+                        WBE
 
+                    </a>
+                    <div class="tel">
+                        <a href="tel:+380931770494" class="tel__link"> +38 (093) 177 04 94</a>
+                        <a href="tel:+380442331633" class="tel__link"> +38 (044) 233 16 33</a>
+                    </div>
+                </div>
+            </div>
         </footer>
 
+    </div>
+    <div class="popup hide d-flex align-items-center justify-content-center">
+        <div class="form bg-white m-a">
+            <form action="#">
+                <div class="form__title t-gradient f-bold">
+                    Заявка на участь у зустрічі
+                </div>
+                <div class="form__block">
+                    <input type="text" class="form__input" name="name" placeholder="Ім’я">
+
+                    <div class="form__erorr"></div>
+                </div>
+                <div class="form__block">
+                    <input type="email" class="form__input" name="email" placeholder="E-mail">
+
+                    <div class="form__erorr"></div>
+                </div>
+                <div class="form__block">
+                    <input type="number" class="form__input" name="phone" placeholder="+38 (___) ___-__-__">
+
+                    <div class="form__erorr"></div>
+                </div>
+                <div class="form__block">
+                    <div class="title f-bold">
+                        Оберіть зручний спосіб зв’язку
+                    </div>
+                    <label class="form__checkbox">
+                        <input type="checkbox" name="connect" value="tel">
+                        <span class="check">
+                            <svg width="32" height="25" viewBox="0 0 32 25" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M14.4851 23.8598C13.0343 25.3801 10.6802 25.3801 9.23008 23.8598L1.08812 15.3278C-0.362705 13.8083 -0.362705 11.3414 1.08812 9.82185C2.53824 8.30154 4.89232 8.30154 6.34314 9.82185L11.1942 14.9045C11.5604 15.2875 12.1548 15.2875 12.5217 14.9045L25.6569 1.14023C27.107 -0.380077 29.4611 -0.380077 30.9119 1.14023C31.6086 1.8703 32 2.86085 32 3.89323C32 4.9256 31.6086 5.91615 30.9119 6.64622L14.4851 23.8598Z"
+                                    fill="url(#paint0_linear_0:86)" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_0:86" x1="16" y1="0" x2="16" y2="25"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#590093" />
+                                        <stop offset="1" stop-color="#CD1857" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </span>
+                        <span>Телефон</span>
+                    </label>
+                    <br>
+                    <label class="form__checkbox">
+                        <input type="checkbox" name="connect" value="messenger">
+                        <span class="check">
+                            <svg width="32" height="25" viewBox="0 0 32 25" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M14.4851 23.8598C13.0343 25.3801 10.6802 25.3801 9.23008 23.8598L1.08812 15.3278C-0.362705 13.8083 -0.362705 11.3414 1.08812 9.82185C2.53824 8.30154 4.89232 8.30154 6.34314 9.82185L11.1942 14.9045C11.5604 15.2875 12.1548 15.2875 12.5217 14.9045L25.6569 1.14023C27.107 -0.380077 29.4611 -0.380077 30.9119 1.14023C31.6086 1.8703 32 2.86085 32 3.89323C32 4.9256 31.6086 5.91615 30.9119 6.64622L14.4851 23.8598Z"
+                                    fill="url(#paint0_linear_0:86)" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_0:86" x1="16" y1="0" x2="16" y2="25"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#590093" />
+                                        <stop offset="1" stop-color="#CD1857" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </span>
+                        <span>Месенджер</span>
+                    </label>
+                    <br>
+                    <label class="form__checkbox">
+                        <input type="checkbox" name="connect" value="mail">
+                        <span class="check">
+                            <svg width="32" height="25" viewBox="0 0 32 25" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M14.4851 23.8598C13.0343 25.3801 10.6802 25.3801 9.23008 23.8598L1.08812 15.3278C-0.362705 13.8083 -0.362705 11.3414 1.08812 9.82185C2.53824 8.30154 4.89232 8.30154 6.34314 9.82185L11.1942 14.9045C11.5604 15.2875 12.1548 15.2875 12.5217 14.9045L25.6569 1.14023C27.107 -0.380077 29.4611 -0.380077 30.9119 1.14023C31.6086 1.8703 32 2.86085 32 3.89323C32 4.9256 31.6086 5.91615 30.9119 6.64622L14.4851 23.8598Z"
+                                    fill="url(#paint0_linear_0:86)" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_0:86" x1="16" y1="0" x2="16" y2="25"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#590093" />
+                                        <stop offset="1" stop-color="#CD1857" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </span>
+                        <span>Email</span>
+                    </label>
+
+                </div>
+                <button class="btn btn__fill  t-white"> <span class="btn__fill_helper"></span>Надіслати заявку</button>
+            </form>
+            <div class="close" data-close="">×</div>
+        </div>
     </div>
 
 
