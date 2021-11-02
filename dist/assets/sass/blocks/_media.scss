@@ -1,11 +1,6 @@
-@media (max-width: 1439px) {
-}
+
 @media (max-width: 1200px) {
-  .section {
-    &__title {
-      color: red;
-    }
-  }
+
   .for-who {
     &__item {
       h3 {
@@ -22,11 +17,6 @@
 }
 
 @media (max-width: 992px) {
-  .section {
-    &__title {
-      color: rgb(0, 114, 47);
-    }
-  }
   .hero {
     &__title {
       width: 100%;
@@ -81,9 +71,6 @@
 
 @media (max-width: 768px) {
   .section {
-    &__title {
-      color: rgb(17, 0, 255);
-    }
     &__for-who {
       padding: 4rem 0;
     }
@@ -189,9 +176,6 @@
   .section {
     &__hero {
       padding: 5rem 0;
-    }
-    &__title {
-      color: rgb(167, 7, 127);
     }
     &__about {
       padding: 4rem 0;
@@ -351,10 +335,4 @@
     }
   }
 }
-@media (max-width: 320px) {
-  .section {
-    &__title {
-      color: rgb(217, 255, 0);
-    }
-  }
-}
+
