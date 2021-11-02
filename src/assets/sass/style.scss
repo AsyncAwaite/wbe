@@ -26,7 +26,17 @@ body {
   &.active {
     overflow-y: hidden;
   }
-  // background:red;
+  &.loaded_hiding {
+    .preloader {
+      transition: .5s opacity;
+      opacity: 0;
+    }
+  }
+  &.loaded{
+    .preloader {
+     display: none;
+    }
+  }
 }
 h1,
 h2,
@@ -35,6 +45,24 @@ h4,
 h5,
 h6 {
   margin: 0;
+}
+.progress-bar {
+  width: 100%;
+  height: 3px;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 51;
+  div {
+    transition: width .1s linear;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: $bg-a;
+  }
 }
 
 .logo {
@@ -61,7 +89,7 @@ h6 {
   top: 2.4rem;
   left: 0;
   right: 0;
-  z-index: 100;
+  z-index: 50;
   transition: all 0.5s linear;
   &_fixed {
     top: 0;
@@ -159,6 +187,39 @@ h6 {
   }
 
 
+}
+.preloader {
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #141414;
+  overflow: hidden;
+  z-index: 1001;
+  align-items: center;
+  justify-content: center;
+  img {
+    max-width: 20rem;
+    animation: preloader 3s infinite linear;
+  }
+
+
+}
+@keyframes preloader {
+  0% {
+opacity: 1;
+  }
+  50% {
+opacity: 0;
+  }
+  100% {
+opacity: 1;
+  }
+  
 }
 
 @import "blocks/helpers";
